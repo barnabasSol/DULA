@@ -1,0 +1,364 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#p1_health {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  background-color: red;
+  right: 70%;
+  bottom: 90%;
+}
+
+#p1_name {
+  position: absolute;
+  right: 90%;
+  bottom: 83%;
+  color: white;
+  font-size: 30px;
+  display: none;
+  font-weight: bold;
+}
+
+#p2_health {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  background-color: red;
+  right: 2%;
+  bottom: 90%;
+}
+
+#p2_name {
+  position: absolute;
+  right: 3%;
+  bottom: 83%;
+  color: white;
+  font-size: 30px;
+  display: none;
+  font-weight: bold;
+}
+
+#p1_health #health_color1 {
+  width: 100%;
+  background-color: rgb(41, 241, 41);
+  height: 100%;
+}
+
+#p2_health #health_color2 {
+  width: 100%;
+  background-color: rgb(41, 241, 41);
+  height: 100%;
+}
+
+.environment {
+  position: relative;
+  grid-area: env;
+  background-image: url(images/africa.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(78, 74, 78, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  height: 350px;
+  width: 600px;
+  background-color: rgba(253, 249, 253, 0.8);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+
+.menu button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.menu button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#pop_up{
+  height: 350px;
+  width: 600px;
+  background-color: rgba(253, 249, 253, 0.8);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  display: none;  
+}
+
+#pop_up button{
+  height: 50px;
+  width: 200px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#pop_up button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#pop_up span{
+  font-size: larger;
+}
+.floor {
+  grid-area: flo;
+  background-color: #546402;
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
+
+#choice_close {
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 96%;
+  bottom: 93%;
+}
+
+.pick {
+  display: none;
+  position: absolute;
+  top: 95%;
+  left: 47%;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.floor img {
+  height: 50px;
+  width: 50px;
+  display: none;
+}
+
+.floor img:hover {
+  border: 1px solid white;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "env"
+    "flo";
+  grid-template-rows: 12fr 1fr;
+  grid-template-columns: 10fr;
+}
+
+#figure1 {
+  position: absolute;
+  height: 100px;
+  width: 8px;
+  border: 1px solid black;
+  background-color: black;
+  position: relative;
+  border: none;
+  /* transition: transform 0.5s; */
+}
+
+.head {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.head2 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p1 {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50%;
+  top: 33%;
+  position: absolute;
+  display: none;
+}
+
+.p2 {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 33%;
+  position: absolute;
+  display: none;
+}
+.figure2 {
+  position: absolute;
+  height: 100px;
+  width: 8px;
+  background-color: black;
+  position: relative;
+}
+
+.left_arm {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  transform-origin: top right;
+  transform: rotate(20deg);
+  transition: transform 0.2s;
+  z-index: -1;
+}
+
+.weapon {
+  position: absolute;
+  height: 130px;
+  width: 10px;
+  background-color: rgb(211, 22, 211);
+  top: 100%;
+  transform: rotate(0deg);
+}
+
+.weapon2 {
+  position: absolute;
+  height: 130px;
+  width: 10px;
+  background-color: cyan;
+  top: 100%;
+  transform: rotate(0deg);
+}
+
+.left_arm2 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  transform-origin: top right;
+  transform: rotate(-50deg);
+  transition: transform 0.2s;
+  z-index: -1;
+}
+
+.right_arm {
+  position: absolute;
+  top: 10%;
+  left: 200%;
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  transform: rotate(-19deg);
+  z-index: -1;
+}
+
+.right_arm2 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  transform-origin: top right;
+  transform: rotate(20deg);
+  z-index: -1;
+}
+
+.left_leg {
+  top: 97%;
+  position: absolute;
+  height: 140px;
+  width: 10px;
+  background-color: black;
+  transform: rotate(16deg);
+  right: 200%;
+}
+
+.left_leg2 {
+  top: 97%;
+  position: absolute;
+  height: 140px;
+  width: 10px;
+  background-color: black;
+  transform: rotate(-16deg);
+  left: 200%;
+}
+
+.right_leg {
+  top: 97%;
+  position: absolute;
+  height: 140px;
+  width: 10px;
+  background-color: black;
+  transform: rotate(-16deg);
+  left: 200%;
+}
+
+.right_leg2 {
+  top: 97%;
+  position: absolute;
+  height: 140px;
+  width: 10px;
+  background-color: black;
+  transform: rotate(16deg);
+  right: 200%;
+}

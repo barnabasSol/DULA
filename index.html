@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="blur">
+      <div id="pop_up">
+        <span class="winner">Player 1 WON!</span>
+        <button id="play_again">Play Again</button>
+        <button id="exit_game">Exit</button>
+      </div>
+      <div class="menu">
+        <button id="start">Start</button>
+        <button id="options">Options</button>
+      </div>
+    </div>
+    <main>
+      <div class="environment">
+        <img id="choice_close" src="images/close.png" alt="" />
+
+        <div id="p1_health">
+          <div id="health_color1"></div>
+        </div>
+        <span id="p1_name">Player 1</span>
+
+        <div id="p2_health">
+          <div id="health_color2"></div>
+        </div>
+        <span id="p2_name">Player 2</span>
+
+        <div class="p1">
+          <div id="figure1">
+            <div class="head"></div>
+            <div class="left_arm">
+              <div class="weapon"></div>
+            </div>
+            <div class="right_arm"></div>
+            <div class="left_leg"></div>
+            <div class="right_leg"></div>
+          </div>
+        </div>
+        <div class="p2">
+          <div class="figure2">
+            <div class="head2"></div>
+            <div class="left_arm2">
+              <div class="weapon2"></div>
+            </div>
+            <div class="right_arm2"></div>
+            <div class="left_leg2"></div>
+            <div class="right_leg2"></div>
+          </div>
+        </div>
+        <span class="pick">Pick A World</span>
+      </div>
+      <div class="floor">
+        <img class="choice" id="a" src="images/africa.jpg" alt="" />
+        <img class="choice" id="n" src="images/night.jpg" alt="" />
+        <img class="choice" id="s" src="images/space.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
+<noscript>INSTALL JS</noscript>
